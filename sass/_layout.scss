@@ -7,9 +7,13 @@
 }
 
 .header {
+  font-size: 1.4rem;
   background-color: #fff;
   height: 7rem;
   border-bottom: 1px solid var(--gl-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .content {
