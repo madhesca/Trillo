@@ -1,0 +1,116 @@
+:root {
+  --cp-primary: #eb2f64;
+  --cp-primary-l: #ff3366;
+  --cp-primary-d: #ba265d;
+
+  --gl-1: #faf9f9;
+  --gl-2: #f4f2f2;
+  --gl-3: #f0eeee;
+  --gl-4: #ccc;
+
+  --gd-1: #333;
+  --gd-2: #777;
+  --gd-3: #999;
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--cp-primary),
+    var(--cp-primary-d)
+  );
+  color: var(--gd-2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/*
+								
+								
+								
+								
+				flex				
+								
+				flex-direction				
+					row	align side by side from left	12345	default
+					row-reverse	align side by side from right	54321	
+					column	align on top of each other from left	1	
+							2	
+							3	
+							4	
+							5	
+								
+					column-reverse	align on top of each other from left	5	
+							4	
+							3	
+							2	
+							1	
+								
+								
+				justify-content		this is for the horizontal axis		
+					center	align center		
+					space-between			
+					space-around			
+					space-evenly			
+					flex-end	align to the right		
+					flex-start	default		
+								
+				align-items		this is for vertical axis		
+					center	align at the center of the biigger div		
+					flex-start	align at the top of the div		
+					flex-end	align at the bottom of the div		
+					stretch	follow the length of the longest  div	default	
+					baseline	aline the text of each div		
+								
+								
+				align-self		this is assign to a particular div 		
+					flex-end	align to botton 		
+					flex-start			
+					stretch			
+								
+				order		this is assign to a particular div 		
+					-1	start		
+					0	normal		
+					1	last		
+								
+				flex-grow or flex	integer	grow to its space		
+								
+				flex-basis	integer	set div width but it will shrink once out of space		
+								
+				flex-shrink	if 0	div will not shrink		
+								
+								
+shorthand for grow shrink and basis				flex: 1 0 300px 				
+								
+								
+				align-content	space-around			
+					center			
+					flex-end			
+					flex-start			
+					space-between			
+								
+								
+				flex-wrap				
+
+*/
