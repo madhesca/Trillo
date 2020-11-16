@@ -34,15 +34,11 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  background-image: linear-gradient(
-    to right bottom,
-    var(--cp-primary),
-    var(--cp-primary-d)
-  );
+  background-image: linear-gradient(to right bottom, var(--cp-primary), var(--cp-primary-d));
   color: var(--gd-2);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 150vh;
 }
 
 /*
