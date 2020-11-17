@@ -255,3 +255,20 @@ shorthand for grow shrink and basis				flex: 1 0 300px
   padding: 2.5rem;
   text-align: center;
   color: var(--gl-4); }
+
+.gallery {
+  display: flex;
+  justify-content: space-evenly; }
+  .gallery__photo {
+    width: 100%;
+    display: block; }
+
+.overview {
+  display: flex; }
+  .overview__stars {
+    margin-right: auto;
+    background-color: red; }
+  .overview__icon-star, .overview__icon-location {
+    height: 1.75rem;
+    width: 1.75rem;
+    fill: var(--cp-primary); }
