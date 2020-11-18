@@ -12,6 +12,8 @@
   --gd-2: #777;
   --gd-3: #999;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  --line: 1px solid var(--gl-2);
 }
 
 * {
@@ -38,7 +40,7 @@ body {
   color: var(--gd-2);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 150vh;
+  min-height: 250vh;
 }
 
 /*

@@ -190,13 +190,20 @@
 
 .overview {
   display: flex;
+  border-bottom: var(--line);
+  align-items: center;
 
   &__heading {
+    font-size: 2.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
   }
 
   &__stars {
+    display: flex;
     margin-right: auto;
-    background-color: red;
   }
 
   &__icon-star,
@@ -207,17 +214,72 @@
   }
 
   &__location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon-location {
+    margin-right: 0.5rem;
   }
 
   &__rating {
+    background-color: var(--cp-primary);
+    color: #fff;
+    margin-left: 3rem;
+    align-self: stretch;
+    padding: 0 2.25rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
 
   &__rating-average {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: -3px;
   }
 
   &__rating-count {
+    font-size: 0.8rem;
+    text-transform: uppercase;
   }
 }
 
+/////////////BUTTON/////////////////
+
 .btn-inline {
+  border: none;
+  color: var(--cp-primary);
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-block;
+
+  &:hover {
+    color: var(--gd-1);
+  }
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
 }
