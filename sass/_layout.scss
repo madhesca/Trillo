@@ -34,13 +34,13 @@
 
 ///////DETAILS///////////
 .details {
+  font-size: 1.4rem;
   display: flex;
   padding: 4.5rem;
   background-color: var(--gl-2);
 }
 
 .description {
-  font-size: 1.4rem;
   background-color: #fff;
   box-shadow: var(--shadow-light);
   flex: 0 0 60%;
@@ -49,6 +49,5 @@
 }
 
 .user-reviews {
-  background-color: red;
   flex: 1;
 }
