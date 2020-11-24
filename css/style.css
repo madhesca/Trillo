@@ -132,13 +132,16 @@ shorthand for grow shrink and basis				flex: 1 0 300px
   justify-content: space-between; }
 
 .hotel-view {
-  flex-grow: 1; }
+  flex-grow: 1;
+  background-color: #fff; }
 
 .details {
   font-size: 1.4rem;
   display: flex;
+  flex-wrap: wrap;
   padding: 4.5rem;
-  background-color: var(--gl-2); }
+  background-color: var(--gl-2);
+  border-bottom: blue; }
 
 .description {
   background-color: #fff;
@@ -148,7 +151,10 @@ shorthand for grow shrink and basis				flex: 1 0 300px
   margin-right: 4.5rem; }
 
 .user-reviews {
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .logo {
   height: 3.25rem;
@@ -330,8 +336,13 @@ shorthand for grow shrink and basis				flex: 1 0 300px
   cursor: pointer;
   transition: all 0.2s;
   display: inline-block; }
+  .btn-inline span {
+    margin-left: 3px;
+    transition: margin-left 0.2s; }
   .btn-inline:hover {
     color: var(--gd-1); }
+    .btn-inline:hover span {
+      margin-left: 8px; }
   .btn-inline:focus {
     outline: none;
     animation: pulsate 1s infinite; }
@@ -434,3 +445,51 @@ shorthand for grow shrink and basis				flex: 1 0 300px
     color: var(--gl-2);
     font-family: sans-serif;
     z-index: 1; }
+
+.cta {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding: 3.5rem 0; }
+  .cta__book-now {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase; }
+
+.btn {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 300;
+  background-image: linear-gradient(to right, var(--cp-primary-l), var(--cp-primary-d));
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 100px;
+  position: relative;
+  overflow: hidden; }
+  .btn > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s; }
+  .btn__visible {
+    padding: 2rem 7.5rem; }
+  .btn__invisible {
+    padding: 2rem 0;
+    position: absolute;
+    left: 0;
+    top: -100%; }
+  .btn:hover {
+    background-image: linear-gradient(to left, var(--cp-primary-l), var(--cp-primary-d)); }
+  .btn:hover .btn__visible {
+    transform: translateY(100%); }
+  .btn:hover .btn__invisible {
+    top: 0; }
+  .btn:focus {
+    outline: none;
+    animation: pulsate 1s infinite; }

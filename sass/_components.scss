@@ -260,8 +260,16 @@
   transition: all 0.2s;
   display: inline-block;
 
+  & span {
+    margin-left: 3px;
+    transition: margin-left 0.2s;
+  }
+
   &:hover {
     color: var(--gd-1);
+    span {
+      margin-left: 8px;
+    }
   }
   &:focus {
     outline: none;
@@ -408,5 +416,72 @@
     color: var(--gl-2);
     font-family: sans-serif;
     z-index: 1;
+  }
+}
+
+/////////////CTA///////////
+
+.cta {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding: 3.5rem 0;
+
+  &__book-now {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 300;
+  background-image: linear-gradient(to right, var(--cp-primary-l), var(--cp-primary-d));
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 100px;
+  position: relative;
+  overflow: hidden;
+
+  & > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s;
+  }
+
+  &__visible {
+    padding: 2rem 7.5rem;
+  }
+
+  &__invisible {
+    padding: 2rem 0;
+    position: absolute;
+    left: 0;
+    top: -100%;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to left, var(--cp-primary-l), var(--cp-primary-d));
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+  &:hover &__invisible {
+    top: 0;
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
   }
 }
