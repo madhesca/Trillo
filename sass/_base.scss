@@ -16,6 +16,12 @@
   --line: 1px solid var(--gl-2);
 }
 
+$bp-largest: 75em;
+$bp-large: 68.75em;
+$bp-medium: 56.25em;
+$bp-small: 37.5em;
+$bp-smallest: 31.75em;
+
 * {
   margin: 0;
   padding: 0;
@@ -30,17 +36,21 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
 }
 
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  background-image: linear-gradient(to right bottom, var(--cp-primary), var(--cp-primary-d));
+   background-image: linear-gradient(to right bottom, var(--cp-primary), var(--cp-primary-d));
   color: var(--gd-2);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 250vh;
+  min-height: 150vh;
 }
 
 /*

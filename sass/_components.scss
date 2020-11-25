@@ -12,6 +12,12 @@
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: $bp-smallest) {
+    order: 1;
+    flex: 0 0 80%;
+    margin: auto;
+  }
+
   &__input {
     color: inherit;
     font-size: inherit;
@@ -116,11 +122,34 @@
   margin-top: 3.5rem;
   font-size: 1.5rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  @media only screen and (max-width: $bp-small) {
+    padding: 0;
+    margin: 0;
+  }
+
   &__item {
     position: relative;
 
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0.5rem 0;
+      }
+      @media only screen and (max-width: $bp-small) {
+        margin: 0;
+      }
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
     }
   }
 
@@ -157,6 +186,17 @@
     z-index: 10;
     display: flex;
     align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0.5rem;
+    }
   }
 
   &__icon {
@@ -164,6 +204,12 @@
     width: 1.75rem;
     fill: currentColor;
     margin-right: 2rem;
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+      margin-bottom: 0.7rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 }
 
@@ -172,6 +218,10 @@
   padding: 2.5rem;
   text-align: center;
   color: var(--gl-4);
+
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }
 //////////GALLERY ////////
 .gallery {
@@ -199,6 +249,11 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
   }
 
   &__stars {
@@ -233,17 +288,26 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 1.5rem;
+    }
   }
 
   &__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -3px;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+    }
   }
 
   &__rating-count {
     font-size: 0.8rem;
     text-transform: uppercase;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 0.5rem;
+    }
   }
 }
 
@@ -340,7 +404,8 @@
     margin-right: auto;
   }
 
-  &__freinds {
+  &__friends {
+    display: flex;
   }
 
   &__photo {
@@ -350,7 +415,7 @@
     border-radius: 50%;
     border: 3px solid #fff;
     &:not(:last-child) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
     }
   }
 }
@@ -364,6 +429,12 @@
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
   &__text {
     z-index: 10;
     margin-bottom: 2rem;
@@ -430,6 +501,10 @@
   width: 100%;
   justify-content: center;
   padding: 3.5rem 0;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2.5rem 0;
+  }
 
   &__book-now {
     font-size: 2rem;
